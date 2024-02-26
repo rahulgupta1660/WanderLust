@@ -34,16 +34,6 @@ const userRoute = require("./routes/user.js");
 
 const CustomError = require("./utils/CustomError.js");
 
-//ejs
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-app.engine("ejs", ejsMate);
-
-//middlewares
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride("_method"));
-
 //connect to database
 main()
   .then(() => {
@@ -55,6 +45,16 @@ async function main() {
   // await mongoose.connect("mongodb://127.0.0.1:27017/WanderLust");
   mongoose.connect(process.env.ATLASDB_URL);
 }
+
+//ejs
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.engine("ejs", ejsMate);
+
+//middlewares
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
 
 const store = MongoStore.create({
   mongoUrl: process.env.ATLASDB_URL,
