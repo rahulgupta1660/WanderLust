@@ -1,0 +1,8 @@
+.card .icon{
+    position: absolute;
+    right: 18px;
+    top: 8px;
+    font-size: 20px;
+    color: #fff;
+    background-color: aqua;
+}

@@ -1,0 +1,20 @@
+<% layout("layouts/boilerplate") %>
+<body>
+    <div class="container">
+        <div class="row py-5">
+            <% for (let listing of allListings) { %>
+                <div class="col-md-3 py-3">
+                    <a href="/listings/<%- listing._id %>" class="text-decoration-none">
+                        <div class="card">
+                            <img src="<%- listing.image.url %>" class="card-img-top object-fit-cover" style="height : 180px" alt="img">
+                            <div class="card-body">
+                            <h5 class="card-title text-truncate"><%- listing.title %></h5>
+                            <p class="card-text text-truncate"><%- listing.description %></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
