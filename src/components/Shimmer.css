@@ -1,0 +1,13 @@
+.shimmer {
+  opacity: 0.9;
+  animation: shimmer-loading 1s linear infinite alternate;
+}
+
+@keyframes shimmer-loading {
+  0% {
+    background-color: hsl(0, 0%, 85%, 1);
+  }
+  100% {
+    background-color: hsl(0, 0%, 70%, 1);
+  }
+}
