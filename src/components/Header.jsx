@@ -11,8 +11,6 @@ const Header = () => {
           </Link>
         </div>
         <nav className="flex gap-10">
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact us</Link>
           <Link to="/signup">Signup</Link>
           <Link to="/login">Login</Link>
         </nav>
