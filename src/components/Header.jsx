@@ -10,6 +10,9 @@ const Header = () => {
             Wander<span className="text-green-500">Lust.</span>
           </Link>
         </div>
+        <div className="filter">
+          <input type="text" name="" id="" />
+        </div>
         <nav className="flex gap-10">
           <Link to="/signup">Signup</Link>
           <Link to="/login">Login</Link>
