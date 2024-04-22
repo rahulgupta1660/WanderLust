@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Card = ({ listings }) => {
   return (
     <div>
+      <Link to="/create">Create</Link>
       <div className="grid grid-cols-3 gap-16">
         {listings.map((listing) => {
           return (
